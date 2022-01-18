@@ -4,3 +4,6 @@
 [submodule "submodules/noahreinalter"]
 	path = submodules/noahreinalter
 	url = https://github.com/noahreinalter/advent_of_code
+[submodule "submodules/UnHold"]
+	path = submodules/UnHold
+	url = git@github.com:UnHolds/AdventOfCode.git
