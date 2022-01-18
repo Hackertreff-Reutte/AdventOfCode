@@ -10,12 +10,18 @@
 
 - [UnHolds](https://github.com/UnHolds/AdventOfCode)
 
-
 ## How to clone
+
 Make sure to have the ssh-agent enabled, otherwise you will need to enter
 your password a lot
+
 ```
  eval $(ssh-agent)
+```
+
+or on Windows using PowerShell
+```
+Get-Service ssh-agent
 ```
 
 If you have the agent enabled you can use the following command to clone the
