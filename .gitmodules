@@ -1,0 +1,3 @@
+[submodule "submodules/Lambda"]
+	path = submodules/Lambda
+	url = git@github.com:8-Lambda-8/adventOfCode.git
