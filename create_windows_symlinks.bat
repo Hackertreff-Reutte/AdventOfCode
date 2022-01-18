@@ -7,16 +7,24 @@ echo "Script must be run as admin, because mklink command is needed"
 pause
 exit
 
-:isadministrator
 
+:isadministrator
+cls
 echo Creating symlinks
 
-FOR /d %%d IN (.\*.*) DO (
+cd "%~dp0."
+
+SETLOCAL ENABLEDELAYEDEXPANSION
+FOR /d %%d IN (.\*) DO (
 	echo %%d | >nul findstr /I "20[0-4][0-9]" && (
 		FOR %%f IN (%%d\*) DO (
-			for /f "delims=" %%x in (%%f) do set Symlink=%%x
-			set "Symlink=%Symlink:/=\%"
-			mklink /D %%f_win %Symlink%
+			
+			FOR /F %%i IN (%%f) DO (
+
+				set symlink=%%i
+				set "symlink=!symlink:/=\!"
+				mklink /D %%f_win !symlink!
+			)
 		)
 	)
 )
