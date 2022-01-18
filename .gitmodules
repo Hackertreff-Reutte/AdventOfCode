@@ -7,3 +7,6 @@
 [submodule "submodules/UnHold"]
 	path = submodules/UnHold
 	url = git@github.com:UnHolds/AdventOfCode.git
+[submodule "submodules/alexl4123"]
+	path = submodules/alexl4123
+	url = git@github.com:alexl4123/advent_of_code.git
