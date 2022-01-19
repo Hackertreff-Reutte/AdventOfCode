@@ -1,17 +1,21 @@
-on: issues
+on: 
+  issues:
+    types:
+      - opened
 
 jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: View issue information
-        run: |
-          echo "Issue title: ${{ github.event.issue.title }}"
-          echo "Issue body: ${{ github.event.issue.body }}"
-
-# You also can print the whole github context to the logs to view more details.
-      - name: View the github context
-        run: echo "$GITHUB_CONTEXT"
-        env:
-          GITHUB_CONTEXT: ${{ toJson(github) }}
+      - name: Contributor_Submodules_Action
+        uses: noahreinalter/Contributor_Submodules_Action@latest
+        with:
+          url: '${{ github.event.issue.title }}'
+          users: 'UnHolds'
+      - uses: peter-evans/close-issue@v1
+      - run: |
+          git add .
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
+          git diff-index --quiet HEAD || (git commit -m "Added ${{ github.event.issue.title }}" && git push)
