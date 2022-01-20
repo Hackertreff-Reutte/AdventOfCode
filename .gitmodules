@@ -10,3 +10,6 @@
 [submodule "submodules/alexl4123"]
 	path = submodules/alexl4123
 	url = git@github.com:alexl4123/advent_of_code.git
+[submodule "submodules/xiretza"]
+	path = submodules/xiretza
+	url = https://git.it-syndikat.org/xiretza/advent-of-code.git
