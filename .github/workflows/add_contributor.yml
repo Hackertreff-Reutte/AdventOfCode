@@ -12,7 +12,7 @@ jobs:
       - name: Contributor_Submodules_Action
         uses: noahreinalter/Contributor_Submodules_Action@latest
         with:
-          url: '${{ github.event.issue.title }}'
+          url: '${{ github.event.issue.body }}'
           users: 'UnHolds noahreinalter'
       - uses: peter-evans/close-issue@v1
       - run: |
