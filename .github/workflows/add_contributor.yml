@@ -19,5 +19,4 @@ jobs:
           git add .
           git config user.name "GitHub Actions Bot"
           git config user.email "<>"
-          echo ${{ github.repository.issue.title }}
           git diff-index --quiet HEAD || (git commit -m "Added ${{ github.event.issue.body }}" && git push)
