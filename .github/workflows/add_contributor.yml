@@ -5,7 +5,7 @@ on:
 
 jobs:
   job1:
-    if: github.repository.issue.title == 'Add Submodule'
+    if: github.event.issue.title == 'Add Submodule'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -19,4 +19,5 @@ jobs:
           git add .
           git config user.name "GitHub Actions Bot"
           git config user.email "<>"
+          echo ${{ github.repository.issue.title }}
           git diff-index --quiet HEAD || (git commit -m "Added ${{ github.event.issue.body }}" && git push)
