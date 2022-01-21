@@ -1,0 +1,21 @@
+on:
+  workflow_dispatch:
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: 'true'
+      - run: git submodule update --remote
+      - name: Contributor_Submodules_Action
+        uses: noahreinalter/Contributor_Submodules_Action@latest
+        with:
+          users: 'UnHolds noahreinalter'
+          reload_submodules: 'true'
+      - run: |
+          git add .
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
+          git diff-index --quiet HEAD || (git commit -m "Updated contributors" && git push)
