@@ -12,7 +12,6 @@ jobs:
       - name: Contributor_Submodules_Action
         uses: noahreinalter/Contributor_Submodules_Action@latest
         with:
-          users: 'UnHolds noahreinalter'
           reload_submodules: 'true'
       - run: |
           git add .
