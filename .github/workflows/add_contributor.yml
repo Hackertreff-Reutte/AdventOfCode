@@ -1,22 +1,21 @@
 on: 
-  issues:
-    types:
-      - opened
+  workflow_dispatch:
+    inputs:
+      url:
+        description: 'Url of the repo'     
+        required: true
 
 jobs:
   job1:
-    if: github.event.issue.title == 'Add Submodule'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Contributor_Submodules_Action
         uses: noahreinalter/Contributor_Submodules_Action@latest
         with:
-          url: '${{ github.event.issue.body }}'
-          users: 'UnHolds noahreinalter'
-      - uses: peter-evans/close-issue@v1
+          url: '${{ github.event.inputs.url }}'
       - run: |
           git add .
           git config user.name "GitHub Actions Bot"
           git config user.email "<>"
-          git diff-index --quiet HEAD || (git commit -m "Added ${{ github.event.issue.body }}" && git push)
+          git diff-index --quiet HEAD || (git commit -m "Added ${{ github.event.inputs.url }}" && git push)
