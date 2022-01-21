@@ -12,6 +12,8 @@
 
 - [xiretza](https://git.it-syndikat.org/xiretza/advent-of-code)
 
+- [ulmer-a](https://github.com/ulmer-a/advent-of-code)
+
 ## How to clone
 
 Make sure to have the ssh-agent enabled, otherwise you will need to enter

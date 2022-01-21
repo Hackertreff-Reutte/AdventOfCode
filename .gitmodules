@@ -13,3 +13,6 @@
 [submodule "submodules/xiretza"]
 	path = submodules/xiretza
 	url = https://git.it-syndikat.org/xiretza/advent-of-code.git
+[submodule "submodules/ulmer-a"]
+	path = submodules/ulmer-a
+	url = https://github.com/ulmer-a/advent-of-code
