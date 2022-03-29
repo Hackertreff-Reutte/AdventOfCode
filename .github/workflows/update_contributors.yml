@@ -1,21 +1,20 @@
-on: 
+on:
   workflow_dispatch:
-    inputs:
-      url:
-        description: 'Url of the repo'     
-        required: true
 
 jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          submodules: 'true'
+      - run: git submodule update --remote
       - name: Contributor_Submodules_Action
         uses: noahreinalter/Contributor_Submodules_Action@latest
         with:
-          url: '${{ github.event.inputs.url }}'
+          reload_submodules: 'true'
       - run: |
           git add .
           git config user.name "GitHub Actions Bot"
           git config user.email "<>"
-          git diff-index --quiet HEAD || (git commit -m "Added ${{ github.event.inputs.url }}" && git push)
+          git diff-index --quiet HEAD || (git commit -m "Updated contributors" && git push)
