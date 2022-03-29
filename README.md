@@ -14,6 +14,8 @@
 
 - [ulmer-a](https://github.com/ulmer-a/advent-of-code)
 
+- [Sukera](https://github.com/Seelengrab/AdventOfCode)
+
 ## How to clone
 
 Make sure to have the ssh-agent enabled, otherwise you will need to enter
