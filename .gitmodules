@@ -16,3 +16,6 @@
 [submodule "submodules/ulmer-a"]
 	path = submodules/ulmer-a
 	url = https://github.com/ulmer-a/advent-of-code
+[submodule "submodules/Sukera"]
+	path = submodules/Sukera
+	url = https://github.com/Seelengrab/AdventOfCode.git
