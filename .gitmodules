@@ -19,3 +19,6 @@
 [submodule "submodules/Sukera"]
 	path = submodules/Sukera
 	url = https://github.com/Seelengrab/AdventOfCode.git
+[submodule "submodules/Lambda_old"]
+	path = submodules/Lambda_old
+	url = https://github.com/8-Lambda-8/adventOfCode_old.git
