@@ -9,7 +9,7 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Contributor_Submodules_Action
         uses: noahreinalter/Contributor_Submodules_Action@latest
         with:
