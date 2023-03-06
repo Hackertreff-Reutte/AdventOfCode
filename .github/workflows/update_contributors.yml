@@ -8,11 +8,11 @@ jobs:
       - uses: actions/checkout@v3
         with:
           submodules: 'true'
-      - run: git submodule update --remote
       - name: Contributor_Submodules_Action
-        uses: noahreinalter/Contributor_Submodules_Action@latest
+        uses: noahreinalter/Contributor_Submodules_Action@v2
         with:
-          reload_submodules: 'true'
+          relink_submodules: 'true'
+          update_submodules: 'true'
       - run: |
           git add .
           git config user.name "GitHub Actions Bot"

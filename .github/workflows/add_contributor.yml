@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Contributor_Submodules_Action
-        uses: noahreinalter/Contributor_Submodules_Action@latest
+        uses: noahreinalter/Contributor_Submodules_Action@v2
         with:
           url: '${{ github.event.inputs.url }}'
       - run: |
